@@ -1,5 +1,12 @@
 from flask import Flask, render_template, request
+from psycopg2 import DatabaseError, InterfaceError
+from psycopg2.extensions import connection, cursor
 import json
+
+USER = ""
+PWD = ""
+HOST = ""
+DATABASE = ""
 
 app = Flask(__name__)
 
