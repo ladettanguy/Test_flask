@@ -4,7 +4,7 @@ import enum
 
 
 # Create database connection object
-from app import app
+from .app import app
 db = SQLAlchemy(app)
 
 
