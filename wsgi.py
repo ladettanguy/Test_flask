@@ -1,3 +1,3 @@
-from www import get_app
+from flask import Flask
 
-app = get_app()
+app = Flask(__name__)

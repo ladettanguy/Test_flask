@@ -1,4 +1,4 @@
-from ..run import app
+from wsgi import app
 
 
 def get_app():
