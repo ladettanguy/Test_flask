@@ -1,12 +1,5 @@
 from flask import Flask, render_template, request
-from psycopg2 import DatabaseError, InterfaceError
-from psycopg2.extensions import connection, cursor
 import json
-
-USER = ""
-PWD = ""
-HOST = ""
-DATABASE = ""
 
 app = Flask(__name__)
 
@@ -19,12 +12,9 @@ def hello_world():
         my_json = json.loads(data)
         return str(my_json)
     else:
-        return 'test'+str(request.mimetype_params)
+        return 'Hello World !'
 
 
 @app.route('/index/')
 def index():
     return render_template('index.html')
-
-if __name__ == '__main__':
-    app.run()
