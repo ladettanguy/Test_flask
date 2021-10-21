@@ -1,2 +1,2 @@
-web: gunicorn www.app:app
-init: FLASK_APP=app.py flask run
+web: gunicorn wsgi:app
+init: FLASK_APP=run.py flask run

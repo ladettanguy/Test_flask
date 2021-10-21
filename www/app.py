@@ -1,7 +1,8 @@
-from flask import Flask, render_template, request
+from www import get_app
+from flask import render_template, request
 import json
 
-app = Flask(__name__)
+app = get_app()
 
 
 @app.route('/', methods=['POST', 'GET'])
