@@ -1,8 +1,6 @@
-from www import get_app
+from www import app
 from flask import render_template, request
 import json
-
-app = get_app()
 
 
 @app.route('/', methods=['POST', 'GET'])
@@ -13,7 +11,6 @@ def hello_world():
             data = request.data
             my_json = json.loads(data)
             return str(my_json)
-        else:
             return 'Post Hello World !'
     else:
         return 'Get Hello World !'

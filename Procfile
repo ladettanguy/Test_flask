@@ -1,2 +1,2 @@
 web: gunicorn wsgi:app
-init: FLASK_APP=run.py
+init: DATABASE_URL="" FLASK_APP=run.py
